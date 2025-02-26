@@ -60,6 +60,8 @@ RUN sed -i 's/max_bpp=32/max_bpp=24/g' /etc/xrdp/xrdp.ini && \
 # Configure NoVNC
 RUN ln -sf /usr/share/novnc/vnc.html /usr/share/novnc/index.html
 
+# TODO: Make it auto update upon entry
+
 EXPOSE 22 6080 3389
 
 CMD ["/scripts/start.sh"]

@@ -28,7 +28,7 @@ P.S. The container can be hosted and used as a server, in which case the IP may 
 
 ## Cleanup
 
-To remove the container and volumes:
+To remove the container and volumes (WARNING: this will delete the entire persistent system):
 ```bash
 docker compose down --volumes
 ```

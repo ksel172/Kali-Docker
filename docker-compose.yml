@@ -31,7 +31,7 @@ services:
     env_file:
       - .env
     volumes:
-      - kali_data:/home/kali
+      - kali_data:/
       - ./scripts:/scripts
 
 networks:
