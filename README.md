@@ -18,13 +18,13 @@ docker compose up --force-recreate --build
 - RDP: `localhost:3389`
 - SSH: `localhost:22`
 
-P.S: The container and be hosted and used as a server, in which case the IP can vary.
+P.S. The container can be hosted and used as a server, in which case the IP may vary.
 
 ## Default Credentials
 
-- Username: kali
-- Password: kali
-- VNC Password: kali
+- Username: `kali`
+- Password: `kali`
+- VNC Password: `kali`
 
 ## Cleanup
 
