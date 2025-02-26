@@ -2,17 +2,6 @@
 
 A Docker container running Kali Linux with XFCE desktop environment, accessible via VNC, NoVNC, or RDP.
 
-## Features
-
-- Kali Linux with XFCE desktop
-- Multiple access methods:
-  - NoVNC (Web browser)
-  - VNC
-  - RDP
-  - SSH
-- Persistent storage
-- Customizable environment variables
-
 ## Quick Start
 
 1. Clone the repository
