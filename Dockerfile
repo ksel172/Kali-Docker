@@ -28,7 +28,7 @@ RUN apt update && apt install -y \
     xrdp \
     iptables \
     systemd-sysv \
-    && apt clean && rm -rf /var/lib/apt/lists/*
+    && apt clean
 
 # Configure user
 RUN useradd -m -s /bin/bash ${USER} && \
