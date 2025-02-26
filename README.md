@@ -13,10 +13,10 @@ docker compose up --force-recreate --build
 
 ## Access Methods
 
-- NoVNC: http://localhost:6080/vnc.html?autoconnect=true&resize=scale&quality=9
-- VNC: localhost:5901
-- RDP: localhost:3389
-- SSH: localhost:22
+- NoVNC: `http://localhost:6080/vnc.html?autoconnect=true&resize=scale&quality=9`
+- VNC: `localhost:5901`
+- RDP: `localhost:3389`
+- SSH: `localhost:22`
 
 P.S: The container and be hosted and used as a server, in which case the IP can vary.
 
