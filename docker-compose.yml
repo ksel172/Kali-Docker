@@ -1,0 +1,42 @@
+services:
+  kali-desktop:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - USER=${USER}
+        - PASSWORD=${PASSWORD}
+        - VNC_PASSWORD=${VNC_PASSWORD}
+        - HOME=${HOME}
+        - DISPLAY=${DISPLAY}
+        - DEBIAN_FRONTEND=${DEBIAN_FRONTEND}
+    container_name: kali-desktop
+    hostname: kali
+    shm_size: 2g
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    devices:
+      - /dev/net/tun
+    ports:
+      - "22:22"       # SSH
+      - "6080:6080"   # NoVNC
+      - "3389:3389"   # RDP
+    networks:
+      - kali_network
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - kali_data:/home/kali
+      - ./scripts:/scripts
+
+networks:
+  kali_network:
+    driver: bridge
+    
+volumes:
+  kali_data:

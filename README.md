@@ -1,0 +1,45 @@
+# Kali Linux Desktop in Docker
+
+A Docker container running Kali Linux with XFCE desktop environment, accessible via VNC, NoVNC, or RDP.
+
+## Features
+
+- Kali Linux with XFCE desktop
+- Multiple access methods:
+  - NoVNC (Web browser)
+  - VNC
+  - RDP
+  - SSH
+- Persistent storage
+- Customizable environment variables
+
+## Quick Start
+
+1. Clone the repository
+2. Adjust settings in `.env` file if needed
+3. Start the container:
+```bash
+docker compose up --force-recreate --build
+```
+
+## Access Methods
+
+- NoVNC: http://localhost:6080/vnc.html?autoconnect=true&resize=scale&quality=9
+- VNC: localhost:5901
+- RDP: localhost:3389
+- SSH: localhost:22
+
+P.S: The container and be hosted and used as a server, in which case the IP can vary.
+
+## Default Credentials
+
+- Username: kali
+- Password: kali
+- VNC Password: kali
+
+## Cleanup
+
+To remove the container and volumes:
+```bash
+docker compose down --volumes
+```
